@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>iMybook</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <div class="app">
+        <div class="screen">
+
+            <!--navigation: brand logo + pill toggle-->
+            <nav>
+                <a href="index.html" class="brand">
+                    <span class="brand-icon">📖</span>
+                    <span class="brand-name">i<b>My</b>book</span>
+                </a>
+                <div class="pills">
+                    <a href="index.html" class="active">Discover</a>
+                    <a href="reading-list.html">READLIST</a>
+                </div>
+            </nav>
+
+            <!--hero banner-->
+            <section class="hero">
+                <div class="sphere"></div>
+                <div class="hero-text">
+                    <p class="eyebrow">Welcome to</p>
+                    <div class="wordmark">i<span>My</span>book</div>
+                    <h1 class="tagline">Find your next great read</h1>
+                    <p class="sub">Search millions of books, get suggestions and plan your reading.</p>
+                    <a href="#searchPanel" class="btn">Start searching</a>
+                </div>
+            </section>
+
+            <!--search panel-->
+            <section class="panel" id="searchPanel">
+                <h2>Search Books</h2>
+                <div class="controls">
+                    <div class="field">
+                        <label for="searchType">Search by</label>
+                        <select id="searchType">
+                            <option value="title">Title</option>
+                            <option value="author">Author</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="searchInput">Keyword</label>
+                        <input type="text" id="searchInput" placeholder="e.g. Dune or Tolkien">
+                    </div>
+                    <button id="searchBtn">Search</button>
+                </div>
+
+                <!--messages (loading, errors, no results)-->
+                <p id="message"></p>
+
+                <!--search result cards are inserted here by js-->
+                <div id="output"></div>
+            </section>
+
+            <!--suggestion panel-->
+            <section class="panel">
+                <h2>Get a Book Suggestion</h2>
+                <div class="controls">
+                    <div class="field">
+                        <label for="genreSelect">Genre</label>
+                        <select id="genreSelect">
+                            <option value="fantasy">Fantasy</option>
+                            <option value="science fiction">Science Fiction</option>
+                            <option value="romance">Romance</option>
+                            <option value="mystery">Mystery</option>
+                            <option value="horror">Horror</option>
+                            <option value="history">History</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="lengthSelect">Length</label>
+                        <select id="lengthSelect">
+                            <option value="short">Short (under 250 pages)</option>
+                            <option value="medium">Medium (250-500 pages)</option>
+                            <option value="long">Long (over 500 pages)</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="ratingSelect">Rating</label>
+                        <select id="ratingSelect">
+                            <option value="any">Any rating</option>
+                            <option value="good">Good (3.5 and above)</option>
+                            <option value="great">Great (4.0 and above)</option>
+                        </select>
+                    </div>
+                    <button id="suggestBtn">Suggest Books</button>
+                </div>
+
+                <div id="suggestion"></div>
+            </section>
+
+            <!--reading calculator panel -->
+            <section class="panel">
+                <h2>Reading Calculator</h2>
+                <div class="controls">
+                    <div class="field">
+                        <label for="totalPages">Total pages</label>
+                        <input type="number" id="totalPages" min="1" placeholder="e.g. 320">
+                    </div>
+                    <div class="field">
+                        <label for="pagesRead">Pages already read</label>
+                        <input type="number" id="pagesRead" min="0" value="0">
+                    </div>
+                    <div class="field">
+                        <label for="pagesPerDay">Pages read per day</label>
+                        <input type="number" id="pagesPerDay" min="1" placeholder="e.g. 20">
+                    </div>
+                    <button id="calcBtn">Calculate</button>
+                </div>
+
+                <div id="calcResult"></div>
+            </section>
+
+        </div>
+    </div>
+
+    <!--book details window (shown by the details button)-->
+    <div id="detailsBox" class="hidden"></div>
+
+    <script src="localstorage.js"></script>
+    <script src="index.js"></script>
+    <script src="petals.js"></script>
+    </body>
+</html>

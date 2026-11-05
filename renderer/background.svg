@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+<defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f08ab0"/>
+    <stop offset="0.45" stop-color="#f9c3d6"/>
+    <stop offset="1" stop-color="#fff1f6"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#ffffff"/>
+    <stop offset="0.45" stop-color="#ffe3ee"/>
+    <stop offset="1" stop-color="#ffe3ee" stop-opacity="0"/>
+    </radialGradient>
+</defs>
+
+<!-- sky -->
+<rect width="1600" height="900" fill="url(#sky)"/>
+
+<!-- glowing sun -->
+<circle cx="1080" cy="520" r="340" fill="url(#sun)"/>
+<circle cx="1080" cy="520" r="120" fill="#fff6f9" opacity="0.95"/>
+
+<!-- soft clouds -->
+<g fill="#ffffff" opacity="0.55">
+    <ellipse cx="300" cy="230" rx="170" ry="26"/>
+    <ellipse cx="400" cy="205" rx="110" ry="22"/>
+    <ellipse cx="760" cy="150" rx="150" ry="22"/>
+    <ellipse cx="1320" cy="330" rx="180" ry="24"/>
+</g>
+
+<!-- layered hills (far to near) -->
+<path d="M0 620 C200 540 400 600 600 560 C800 520 1000 600 1200 570 C1400 540 1500 590 1600 570 L1600 900 L0 900Z" fill="#f3b8cc" opacity="0.85"/>
+<path d="M0 700 C250 630 450 700 700 660 C950 620 1150 700 1400 650 C1500 630 1550 660 1600 650 L1600 900 L0 900Z" fill="#ec9fba"/>
+<path d="M0 790 C300 730 500 800 800 760 C1100 720 1300 800 1600 750 L1600 900 L0 900Z" fill="#d97fa3"/>
+<path d="M0 850 C400 820 800 870 1200 840 C1400 825 1500 840 1600 835 L1600 900 L0 900Z" fill="#8f3f66"/>
+
+<!-- cherry blossom branches (top right) -->
+<g stroke="#6b3550" stroke-linecap="round" fill="none">
+    <path d="M1620 70 C1470 110 1360 140 1200 240" stroke-width="9"/>
+    <path d="M1440 118 C1400 180 1350 200 1310 270" stroke-width="6"/>
+    <path d="M1330 170 C1290 150 1240 160 1190 150" stroke-width="5"/>
+</g>
+<g>
+    <g fill="#ffc2d6"><circle cx="1500" cy="100" r="26"/><circle cx="1470" cy="130" r="22"/><circle cx="1530" cy="135" r="20"/><circle cx="1440" cy="105" r="18"/></g>
+    <g fill="#ffffff" opacity="0.9"><circle cx="1495" cy="95" r="12"/><circle cx="1462" cy="127" r="10"/><circle cx="1527" cy="132" r="9"/></g>
+    <g fill="#f9a6c3"><circle cx="1330" cy="180" r="28"/><circle cx="1295" cy="205" r="24"/><circle cx="1360" cy="215" r="22"/><circle cx="1300" cy="160" r="18"/></g>
+    <g fill="#ffffff" opacity="0.9"><circle cx="1325" cy="175" r="12"/><circle cx="1292" cy="200" r="10"/><circle cx="1358" cy="210" r="9"/></g>
+    <g fill="#ffc2d6"><circle cx="1220" cy="150" r="22"/><circle cx="1190" cy="180" r="20"/><circle cx="1235" cy="190" r="16"/><circle cx="1200" cy="245" r="24"/><circle cx="1170" cy="225" r="18"/></g>
+    <g fill="#ffffff" opacity="0.9"><circle cx="1215" cy="146" r="9"/><circle cx="1196" cy="241" r="10"/></g>
+</g>
+
+<!-- cherry blossom branch (top left) -->
+<g stroke="#6b3550" stroke-linecap="round" fill="none">
+    <path d="M-20 60 C120 90 220 80 330 140" stroke-width="8"/>
+    <path d="M180 92 C210 140 250 150 270 200" stroke-width="5"/>
+</g>
+<g>
+    <g fill="#f9a6c3"><circle cx="110" cy="85" r="24"/><circle cx="80" cy="60" r="20"/><circle cx="140" cy="62" r="18"/></g>
+    <g fill="#ffffff" opacity="0.9"><circle cx="108" cy="80" r="10"/><circle cx="78" cy="57" r="8"/></g>
+    <g fill="#ffc2d6"><circle cx="290" cy="130" r="26"/><circle cx="320" cy="155" r="22"/><circle cx="262" cy="160" r="20"/><circle cx="272" cy="205" r="22"/></g>
+    <g fill="#ffffff" opacity="0.9"><circle cx="286" cy="126" r="11"/><circle cx="268" cy="201" r="9"/></g>
+</g>
+
+<!-- falling petals -->
+<g fill="#ffd0e0" opacity="0.85">
+    <ellipse cx="900" cy="260" rx="10" ry="5" transform="rotate(30 900 260)"/>
+    <ellipse cx="1010" cy="340" rx="9" ry="4.5" transform="rotate(-20 1010 340)"/>
+    <ellipse cx="640" cy="330" rx="11" ry="5" transform="rotate(50 640 330)"/>
+    <ellipse cx="480" cy="420" rx="9" ry="4.5" transform="rotate(10 480 420)"/>
+    <ellipse cx="1240" cy="440" rx="10" ry="5" transform="rotate(-40 1240 440)"/>
+    <ellipse cx="1400" cy="520" rx="9" ry="4.5" transform="rotate(25 1400 520)"/>
+    <ellipse cx="760" cy="470" rx="10" ry="5" transform="rotate(-10 760 470)"/>
+    <ellipse cx="300" cy="520" rx="11" ry="5" transform="rotate(40 300 520)"/>
+    <ellipse cx="1130" cy="600" rx="9" ry="4.5" transform="rotate(15 1130 600)"/>
+    <ellipse cx="560" cy="610" rx="10" ry="5" transform="rotate(-30 560 610)"/>
+    <ellipse cx="180" cy="380" rx="9" ry="4.5" transform="rotate(20 180 380)"/>
+    <ellipse cx="1480" cy="330" rx="10" ry="5" transform="rotate(-25 1480 330)"/>
+</g>
+</svg>
