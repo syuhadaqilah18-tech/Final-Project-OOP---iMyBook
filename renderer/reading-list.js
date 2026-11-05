@@ -56,11 +56,11 @@ function renderList(){
         return;
     }
 
-    //calculation: totals from the saved list
+    //calculation: totals from the saved list (uses the Book class method)
     let pagesLeft = 0;
     let finishedCount = 0;
     books.forEach(function (book){
-        pagesLeft += book.pages - book.pagesRead;
+        pagesLeft += book.pagesLeft();
         if (book.status === 'Finished') finishedCount++;
     });
     summary.innerHTML = `
@@ -80,7 +80,7 @@ function renderList(){
 
         addLine(card, 'Author: ' + book.author);
         addLine(card, 'Status: ' + book.status);
-        addLine(card, `Progress: ${book.pagesRead} / ${book.pages} pages`);
+        addLine(card, `Progress: ${book.pagesRead} / ${book.pages} pages (${book.progressPercent()}%)`);
         if (book.notes) addLine(card, 'Notes: ' + book.notes);
 
         //UPDATE: loads this book into the form
@@ -178,16 +178,15 @@ saveBtn.addEventListener('click', function(){
     const books = loadBooks();
 
     if (editingId === null){
-        //CREATE: build a new record and add it to the array
-        const newBook = {
-            id: Date.now(), //unique id based on the current time
+        //CREATE: build a new Book object (the class makes the id) and add it
+        const newBook = new Book({
             title: title,
-            author: author || 'Unknown author',
+            author: author,
             pages: pages,
             pagesRead: pagesRead,
             status: status,
             notes: notes
-        };
+        });
         books.push(newBook);
         saveBooks(books);
         showMessage('Book added to your READLIST.', false);
